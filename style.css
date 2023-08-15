@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #708090;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: #48525C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #48525C;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #FFF5EE;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 800px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #708090;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFF5EE;
+    margin: 20px 0 40px;
+}
+
+.home-content h3::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #708090;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #708090;
+    animation: showRight 1s ease forwards;
+    animation-delay: .2s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #B0C4DE;
+    border: 2px solid #B0C4DE;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #B0C4DE;
+}
+
+.btn-box a:nth-child(2):hover{
+    color: #FFF5EE;
+}
+
+.btn-box a:nth-child(2)::before{
+    background: #B0C4DE;
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #FFF5EE;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci .copy{
+   text-decoration: none; 
+   color: black;
+}
+
+.home-sci .icon{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #B0C4DE;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #B0C4DE;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-sci .icon:hover{
+    color: black;
+}
+
+.home-sci .icon::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #B0C4DE;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci .icon:hover::before{
+    width: 100%;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight{
+   100%{
+     width: 0;
+   }
+}
+
+/* STYLE FOR ABOUT PAGE */
+body .about{
+    background-color: #B0C4DE;
+}
+.heading{
+    font-size: 3.5rem;
+    color: rgb(32, 32, 32);
+    font-weight: 800;
+    text-align: center;
+}
+
+.about .row{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 4rem;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 3rem;
+}
+
+.about .row .content h3 {
+    color: rgb(27, 27, 27);
+    font-size: 2.5rem;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: rgb(27, 27, 27);
+}
+
+.btn-box {
+    margin-top: 2rem;
+}
+
+.sub-heading {
+    font-size: 2rem;
+    color: rgb(32, 32, 32);
+    font-weight: 800;
+    text-align: center;
+}
+
+.education .quote {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.education .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.education .box-container .box {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.education .box-container .box .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    flex: 1 1 70rem;
+}
+
+.education .box-container .box .content h3 {
+    font-size: 1.5rem;
+    color: #012970;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.education h4 {
+    font-size: 1.5rem;
+    color: rgb(34, 109, 0);
+    text-align: left;
+    margin: 1rem;
+    font-weight: 700;
+}
+
+.education .box-container .box .content p {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: black;
+    text-align: left;
+}
